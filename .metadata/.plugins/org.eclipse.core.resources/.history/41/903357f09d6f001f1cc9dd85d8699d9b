@@ -1,0 +1,16 @@
+/*
+ * Excersice1.c
+ *
+ *  Created on: Sep 11, 2024
+ *      Author: MSIFPT
+ */
+#include "Excersice1.h"
+#include "main.h"
+void init_exc1() {
+	HAL_GPIO_TogglePin(GPIOA, RED_LED_Pin);
+}
+
+void exc1_run() {
+	HAL_GPIO_TogglePin(GPIOA, RED_LED_Pin);
+	HAL_GPIO_TogglePin(GPIOA, YELOW_LED_Pin);
+}
