@@ -20,9 +20,9 @@ int color = 0;
 void exc2_run() {
 	switch(color) {
 	case 0:
-		HAL_GPIO_WritePin(GPIOA, RED_LED_Pin, SET);
-		HAL_GPIO_WritePin(GPIOA, YELOW_LED_Pin, SET);
-		HAL_GPIO_WritePin(GPIOA, GREEN_LED_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, RED_LED_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, YELOW_LED_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, GREEN_LED_Pin, SET);
 		count++;
 		if (count == 3) {
 			color = 1;
@@ -30,9 +30,9 @@ void exc2_run() {
 		}
 		break;
 	case 1:
-		HAL_GPIO_WritePin(GPIOA, RED_LED_Pin, SET);
-		HAL_GPIO_WritePin(GPIOA, YELOW_LED_Pin, RESET);
-		HAL_GPIO_WritePin(GPIOA, GREEN_LED_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, RED_LED_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, YELOW_LED_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, GREEN_LED_Pin, RESET);
 		count++;
 		if (count == 2) {
 			color = 2;
@@ -40,9 +40,9 @@ void exc2_run() {
 		}
 		break;
 	case 2:
-		HAL_GPIO_WritePin(GPIOA, RED_LED_Pin, RESET);
-		HAL_GPIO_WritePin(GPIOA, YELOW_LED_Pin, SET);
-		HAL_GPIO_WritePin(GPIOA, GREEN_LED_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, RED_LED_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, YELOW_LED_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, GREEN_LED_Pin, RESET);
 		count++;
 		if (count == 5) {
 			color = 0;

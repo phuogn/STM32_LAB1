@@ -88,6 +88,7 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
   init_exc2();
+  HAL_Delay(2000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
