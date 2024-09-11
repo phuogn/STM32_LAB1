@@ -1,0 +1,17 @@
+/*
+ * Excersice3.c
+ *
+ *  Created on: Sep 11, 2024
+ *      Author: MSIFPT
+ */
+
+#include "main.h"
+#include "Excersice3.h"
+
+void init_exc3() {
+
+}
+
+void exc3_run() {
+
+}
