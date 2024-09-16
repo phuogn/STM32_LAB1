@@ -19,7 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "Excersice6.h"
+#include "Excersice5.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -86,16 +86,18 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  initLED();
+  init_exc5();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int num = 0;
+
+  int road = 1;
+  int index = 0;
   while (1)
   {
-	if (num >= 12) num = 0;
-	controlLED(num++);
+	exc5_run(road, index);
+	display_7SEG(index);
 	HAL_Delay(1000);
     /* USER CODE END WHILE */
 
