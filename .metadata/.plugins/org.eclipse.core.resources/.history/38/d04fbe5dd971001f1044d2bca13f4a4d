@@ -1,0 +1,20 @@
+/*
+ * Excersice4.c
+ *
+ *  Created on: Sep 13, 2024
+ *      Author: MSIFPT
+ */
+#include "Excersice4.h"
+#include "main.h"
+
+void init_exc4() {
+
+}
+
+void exc4_run() {
+	HAL_GPIO_WritePin(GPIOA, SEG_0_Pin, SET);
+}
+
+void exc4_off() {
+	HAL_GPIO_WritePin(GPIOA, SEG_0_Pin, RESET);
+}
