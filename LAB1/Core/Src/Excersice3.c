@@ -8,8 +8,6 @@
 #include "main.h"
 #include "Excersice3.h"
 
-int road = 1;
-int index = 0;
 
 void control_traffic_red(GPIO_TypeDef* GPIOx, uint16_t green_pin, uint16_t yellow_pin, uint16_t red_pin) {
 	HAL_GPIO_WritePin(GPIOx, green_pin, GPIO_PIN_RESET);
@@ -33,7 +31,7 @@ void init_exc3() {
 
 }
 
-void exc3_run() {
+void exc3_run(int road, int index) {
 	if (road == 1) {
 		if (index < 3) {
 			control_traffic_green(GPIOB, LED_10_Pin, LED_9_Pin, LED_8_Pin);

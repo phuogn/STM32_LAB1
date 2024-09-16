@@ -16,4 +16,4 @@ void control_traffic_red(GPIO_TypeDef* GPIOx, uint16_t green_pin, uint16_t yello
 void control_traffic_yelow(GPIO_TypeDef* GPIOx, uint16_t green_pin, uint16_t yellow_pin, uint16_t red_pin);
 void control_traffic_green(GPIO_TypeDef* GPIOx, uint16_t green_pin, uint16_t yellow_pin, uint16_t red_pin);
 void init_exc3();
-void exc3_run();
+void exc3_run(int road, int index);

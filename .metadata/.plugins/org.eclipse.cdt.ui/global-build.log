@@ -1,7 +1,9 @@
-14:01:48 **** Incremental Build of configuration Debug for project LAB1 ****
+23:45:20 **** Incremental Build of configuration Debug for project LAB1 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/Excersice4.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Excersice4.d" -MT"Core/Src/Excersice4.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Excersice4.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/Excersice5.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Excersice5.d" -MT"Core/Src/Excersice5.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Excersice5.o"
+../Core/Src/Excersice5.c:13:5: warning: built-in function 'index' declared as non-function [-Wbuiltin-declaration-mismatch]
+   13 | int index = 0;
+      |     ^~~~~
 arm-none-eabi-gcc -o "LAB1.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\chuyennganh\vixuly\workspace\STM32_LAB1\LAB1\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: LAB1.elf
  
@@ -9,13 +11,13 @@ arm-none-eabi-size   LAB1.elf
 arm-none-eabi-objdump -h -S  LAB1.elf  > "LAB1.list"
 arm-none-eabi-objcopy  -O ihex  LAB1.elf  "LAB1.hex"
    text	   data	    bss	    dec	    hex	filename
-   4976	     20	   1572	   6568	   19a8	LAB1.elf
+   5568	     28	   1572	   7168	   1c00	LAB1.elf
 arm-none-eabi-objcopy  -O binary  LAB1.elf  "LAB1.bin"
 Finished building: default.size.stdout
  
-Finished building: LAB1.list
 Finished building: LAB1.hex
 Finished building: LAB1.bin
  
  
+Finished building: LAB1.list
  
