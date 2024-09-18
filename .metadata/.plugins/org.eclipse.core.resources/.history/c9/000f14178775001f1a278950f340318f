@@ -92,23 +92,18 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int hour = 1,
-	  minute = 32,
-	  seconds = 0;
+
   while (1)
   {
-	  displayClock(hour, minute, seconds);
-	  seconds++;
-	  if (seconds >= 60) {
-		  seconds = 0;
-		  minute++;
-	  }
-	  if (minute >= 60) {
-		  minute = 0;
-		  hour++;
-	  }
-	  if (hour >= 24) hour = 0;
-	  HAL_Delay(100);
+	for (int i = 0; i <= 11; i++) {
+		setNumberOnClock(i);
+		HAL_Delay(100);
+	}
+
+	for (int i = 0; i <= 11; i++) {
+		clearNumberOnClock(i);
+		HAL_Delay(100);
+		}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

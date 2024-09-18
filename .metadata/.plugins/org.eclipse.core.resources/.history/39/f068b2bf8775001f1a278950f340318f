@@ -92,8 +92,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int hour = 1,
-	  minute = 32,
+  int hour = 0,
+	  minute = 0,
 	  seconds = 0;
   while (1)
   {
