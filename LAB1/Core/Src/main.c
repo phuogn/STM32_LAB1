@@ -19,8 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "Excersice8.h"
-#include "Excersice10.h"
+#include "Excersice5.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -87,28 +86,18 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  initLED();
+  init_exc5();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int hour = 1,
-	  minute = 32,
-	  seconds = 0;
+
   while (1)
   {
-	  displayClock(hour, minute, seconds);
-	  seconds++;
-	  if (seconds >= 60) {
-		  seconds = 0;
-		  minute++;
-	  }
-	  if (minute >= 60) {
-		  minute = 0;
-		  hour++;
-	  }
-	  if (hour >= 24) hour = 0;
-	  HAL_Delay(100);
+	exc5_run();
+	display_7SEG();
+	display_7SEG2();
+	HAL_Delay(500);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -165,21 +154,24 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, RED_LED_Pin|YELOW_LED_Pin|SEG_0_Pin|SEG_1_Pin
-                          |SEG_2_Pin|SEG_3_Pin|SEG_4_Pin|SEG_5_Pin
-                          |SEG_6_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, SEG_00_Pin|SEG_01_Pin|SEG_02_Pin|SEG_03_Pin
+                          |SEG_04_Pin|RED_LED_Pin|YELOW_LED_Pin|SEG_0_Pin
+                          |SEG_1_Pin|SEG_2_Pin|SEG_3_Pin|SEG_4_Pin
+                          |SEG_5_Pin|SEG_6_Pin|SEG_05_Pin|SEG_06_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LED_1_Pin|LED_2_Pin|LED_3_Pin|LED_11_Pin
                           |LED_12_Pin|LED_4_Pin|LED_5_Pin|LED_6_Pin
                           |LED_7_Pin|LED_8_Pin|LED_9_Pin|LED_10_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : RED_LED_Pin YELOW_LED_Pin SEG_0_Pin SEG_1_Pin
-                           SEG_2_Pin SEG_3_Pin SEG_4_Pin SEG_5_Pin
-                           SEG_6_Pin */
-  GPIO_InitStruct.Pin = RED_LED_Pin|YELOW_LED_Pin|SEG_0_Pin|SEG_1_Pin
-                          |SEG_2_Pin|SEG_3_Pin|SEG_4_Pin|SEG_5_Pin
-                          |SEG_6_Pin;
+  /*Configure GPIO pins : SEG_00_Pin SEG_01_Pin SEG_02_Pin SEG_03_Pin
+                           SEG_04_Pin RED_LED_Pin YELOW_LED_Pin SEG_0_Pin
+                           SEG_1_Pin SEG_2_Pin SEG_3_Pin SEG_4_Pin
+                           SEG_5_Pin SEG_6_Pin SEG_05_Pin SEG_06_Pin */
+  GPIO_InitStruct.Pin = SEG_00_Pin|SEG_01_Pin|SEG_02_Pin|SEG_03_Pin
+                          |SEG_04_Pin|RED_LED_Pin|YELOW_LED_Pin|SEG_0_Pin
+                          |SEG_1_Pin|SEG_2_Pin|SEG_3_Pin|SEG_4_Pin
+                          |SEG_5_Pin|SEG_6_Pin|SEG_05_Pin|SEG_06_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

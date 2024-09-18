@@ -9,6 +9,7 @@ C_SRCS += \
 ../Core/Src/Excersice10.c \
 ../Core/Src/Excersice3.c \
 ../Core/Src/Excersice4.c \
+../Core/Src/Excersice5.c \
 ../Core/Src/Excersice7.c \
 ../Core/Src/Excersice8.c \
 ../Core/Src/Excersice9.c \
@@ -24,6 +25,7 @@ OBJS += \
 ./Core/Src/Excersice10.o \
 ./Core/Src/Excersice3.o \
 ./Core/Src/Excersice4.o \
+./Core/Src/Excersice5.o \
 ./Core/Src/Excersice7.o \
 ./Core/Src/Excersice8.o \
 ./Core/Src/Excersice9.o \
@@ -39,6 +41,7 @@ C_DEPS += \
 ./Core/Src/Excersice10.d \
 ./Core/Src/Excersice3.d \
 ./Core/Src/Excersice4.d \
+./Core/Src/Excersice5.d \
 ./Core/Src/Excersice7.d \
 ./Core/Src/Excersice8.d \
 ./Core/Src/Excersice9.d \

@@ -1,6 +1,7 @@
-Excersice5.c:16:6:traffic_red	24	static
-Excersice5.c:22:6:traffic_yelow	24	static
-Excersice5.c:28:6:traffic_green	24	static
-Excersice5.c:34:6:exc5_run	8	static
-Excersice5.c:71:6:init_exc5	8	static
-Excersice5.c:81:6:display_7SEG	24	static
+Excersice5.c:17:6:traffic_red	24	static
+Excersice5.c:23:6:traffic_yelow	24	static
+Excersice5.c:29:6:traffic_green	24	static
+Excersice5.c:35:6:exc5_run	8	static
+Excersice5.c:50:6:init_exc5	8	static
+Excersice5.c:64:6:display_7SEG	24	static
+Excersice5.c:107:6:display_7SEG2	24	static
