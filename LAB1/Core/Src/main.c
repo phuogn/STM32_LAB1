@@ -19,7 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "Excersice7.h"
+#include "Excersice8.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -86,7 +86,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  initLEDs();
+  initLED();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -94,8 +94,10 @@ int main(void)
 
   while (1)
   {
-	clearAllClock ();
-	HAL_Delay(1000);
+	for (int i = 0; i <= 11; i++) {
+		setNumberOnClock(i);
+		HAL_Delay(1000);
+	}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
