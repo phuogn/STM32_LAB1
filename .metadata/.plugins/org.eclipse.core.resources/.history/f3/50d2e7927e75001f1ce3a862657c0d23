@@ -97,13 +97,8 @@ int main(void)
   {
 	for (int i = 0; i <= 11; i++) {
 		setNumberOnClock(i);
-		HAL_Delay(100);
+		HAL_Delay(1000);
 	}
-
-	for (int i = 0; i <= 11; i++) {
-		clearNumberOnClock(i);
-		HAL_Delay(100);
-		}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

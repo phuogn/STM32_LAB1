@@ -9,5 +9,5 @@
 #include "main.h"
 
 void clearNumberOnClock(int num) {
-	HAL_GPIO_WritePin(GPIOB, (1 << num), GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOB, (1 << num), GPIO_PIN_SET);
 }
